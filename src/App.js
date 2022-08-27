@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
-// import './App.css';
+import './App.css';
 import SolarSystem from './components/SolarSystem';
 // import Title from './components/Title';
 // import PlanetCard from './components/PlanetCard';
@@ -17,14 +17,14 @@ class App extends React.Component {
         {/* <Title /> */}
         {/* <PlanetCard /> */}
         <Mission />
-        <section>
+        <arcticle>
           { Missions.map((element) => (
             <MissionCard
               key={ element.name }
               info={ element }
             />
           ))}
-        </section>
+        </arcticle>
 
       </div>
     );
