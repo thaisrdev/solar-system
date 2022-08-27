@@ -4,8 +4,9 @@ import Header from './components/Header';
 import SolarSystem from './components/SolarSystem';
 // import Title from './components/Title';
 // import PlanetCard from './components/PlanetCard';
-import Missions from './components/Missions';
+import Mission from './components/Missions';
 import MissionCard from './components/MissionCard';
+import Missions from './data/missions';
 
 class App extends React.Component {
   render() {
@@ -15,8 +16,15 @@ class App extends React.Component {
         <SolarSystem />
         {/* <Title /> */}
         {/* <PlanetCard /> */}
-        <Missions />
-        <MissionCard />
+        <Mission />
+        <section>
+          { Missions.map((element) => (
+            <MissionCard
+              key={ element.name }
+              info={ element }
+            />
+          ))}
+        </section>
 
       </div>
     );
